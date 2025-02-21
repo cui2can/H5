@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025华南国际口腔展邀请函</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .invitation-card {
+            background: linear-gradient(to bottom, 
+                rgba(255, 255, 255, 0.95), 
+                rgba(255, 255, 255, 0.9)
+            ), 
+            url('exhibition-hall.png');  /* 改为png格式 */
+            background-size: cover;
+            background-position: bottom;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 600px;
+            padding: 20px 30px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .company-name {
+            margin-top: 15px;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .company-logo {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .title {
+            color: #0066cc;
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .details {
+            background: rgba(0, 102, 204, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: left;
+            font-size: 22px;  /* 增大基础字体 */
+            line-height: 2.2;
+        }
+
+        .info-label {
+            color: #333;
+            font-size: 24px;  /* 标签文字大小 */
+            font-weight: bold;
+        }
+
+        .info-content {
+            color: #0066cc;
+            font-size: 26px;  /* 内容文字大小 */
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .exhibition-intro {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .booth-number {
+            font-size: 64px;  /* 加大一倍 */
+            color: #0066cc;
+            margin: 15px auto;  /* 修改为auto实现水平居中 */
+            font-weight: bold;
+            text-align: center;  /* 文字居中 */
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            padding: 10px;
+            border: 2px solid #0066cc;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .qr-code p {
+            margin-top: 10px;
+            color: #0066cc;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #666;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation-card">
+        <div class="logo-container">
+            <img src="taotao-logo.png" alt="深圳陶陶科技有限公司" class="company-logo">
+            <div class="company-name">深圳陶陶科技有限公司</div>
+        </div>
+
+        <div class="content">
+            <h1 class="title">诚邀莅临参观</h1>
+            
+            <div class="exhibition-intro">
+                华南国际口腔展是华南地区规模最大的口腔行业专业展会，汇聚全球顶尖口腔医疗设备、材料及技术。本届展会将展示最新口腔医疗技术和产品，提供行业交流与合作的重要平台。诚挚邀请您莅临参观指导，共同探讨行业发展与创新。
+            </div>
+
+            <div class="details">
+                <p><span class="info-label">📅 展会时间：</span>
+                   <span class="info-content">2025年3月3日-3月6日</span></p>
+                <p><span class="info-label">📍 展会地点：</span>
+                   <span class="info-content">广交会展馆 B区</span></p>
+                <p class="text-center"><span class="info-label">🏢 展位号：</span></p>
+                <div class="booth-number">B36</div>
+            </div>
+
+            /* 添加分享按钮样式 */
+            .share-button {
+                display: inline-block;
+                padding: 10px 25px;
+                background: #0066cc;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 18px;
+                margin-top: 20px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            .share-button:hover {
+                background: #0052a3;
+            }
+
+            <div class="qr-code">
+                <img src="qr-code.png" alt="参观预约二维码">
+                <p>参观请识别二维码预登记</p>
+            </div>
+
+            <!-- 添加分享按钮 -->
+            <button onclick="sharePage()" class="share-button">分享邀请函</button>
+
+        </div>
+
+        <!-- 添加分享功能脚本 -->
+        <script>
+            function sharePage() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: '2025华南国际口腔展邀请函',
+                        text: '诚邀您参观2025华南国际口腔展，展位号：B36',
+                        url: window.location.href
+                    })
+                    .catch(error => console.log('分享失败', error));
+                } else {
+                    // 复制链接到剪贴板
+                    const dummy = document.createElement('input');
+                    document.body.appendChild(dummy);
+                    dummy.value = window.location.href;
+                    dummy.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(dummy);
+                    alert('链接已复制到剪贴板！');
+                }
+            }
+        </script>
+
+        <div class="footer">
+            <p>深圳陶陶科技有限公司</p>
+        </div>
+    </div>
+</body>
+</html>
